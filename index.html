@@ -13,8 +13,8 @@
           
           .Button {
             display: flex;
-            justify-content: center;
-            margin-top: 50px;
+            justify-content: space-evenly;
+            margin-top: 25px;
             color: black;
           }
           .grid {
@@ -63,6 +63,123 @@
             justify-content: center; 
             color: white;
           }
+          body {
+  text-align: center;
+  margin: 3em 0 0 0;
+  padding: 0;
+}
+
+div {
+  display: flex;
+  /* vertical-align: middle; */
+}
+
+a {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+ a:hover .left, .left:focus, .left:active, a:hover .top, .top:focus, .top:active, a:hover .bottom,  .bottom:focus, .bottom:active, a:hover .right, .right:focus, .right:active {
+  /* border: 0.252em solid grey; */
+  /* margin-right: .75em; */
+}
+
+a:hover .left:focus, .left:active, a:hover .top:focus, .top:active, a:hover .bottom:focus, .bottom:active, a:hover .right:focus, .right:active {
+  border-top: 0.252em solid white;
+  border-right: 0.252em solid white;
+}
+
+.left {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  /* border:  0.252em solid white;
+  border-radius: 50%; */
+  margin-right: .75em;
+}
+
+.left:after {
+  content: '';
+	display: inline-block;
+  margin-top: .525em;
+  margin-left: 0.3em;
+  width: .7em;
+  height: .7em;
+  border-top: 0.252em solid white;
+  border-right: 0.252em solid white;
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.top {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  /* border:  0.252em solid white;
+  border-radius: 50%; */
+  margin-right: .75em;
+}
+
+.top:after {
+  content: '';
+	display: inline-block;
+  margin-top: .525em;
+  margin-left: 0.3em;
+  width: .7em;
+  height: .7em;
+  border-top: 0.252em solid white;
+  border-right: 0.252em solid white;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.bottom {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  /* border:  0.252em solid white;
+  border-radius: 50%; */
+  margin-right: .75em;
+}
+
+.bottom:after {
+  content: '';
+	display: inline-block;
+  margin-top: .525em;
+  margin-left: 0.3em;
+  width: .7em;
+  height: .7em;
+  border-top: 0.252em solid white;
+  border-right: 0.252em solid white;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.right {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  /* border:  0.252em solid white;
+  border-radius: 50%; */
+  margin-right: .75em;
+}
+
+.right:after {
+  content: '';
+	display: inline-block;
+  margin-top: .525em;
+  margin-left: 0.3em;
+  width: .7em;
+  height: .7em;
+  border-top: 0.252em solid white;
+  border-right: 0.252em solid white;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
       </style>
   </head>
 <body>
@@ -76,11 +193,25 @@
 <div class="grid">
 </div>
 <div class="Button">
-  <button class="top">up</button>
-  <button class="bottom">down</button>
-  <button class="left">left</button>
-  <button class="right">right</button>
+  <div class="button-top">
+    <span class="top"></span>
 </div>
+</div>
+<div style="display:flex" class="Button">
+    <div class="button-left">
+      <span class="left"></span>
+     </div>
+    <div class="button-right">
+      <span class="right"></span>
+    </div>
+</div>
+
+  <div class="Button">
+    <div  class="button-bottom">
+      <span class="bottom"></span>
+    </div>
+  </div>
+   
 <!-- <div class="popup">
   <button class="playAgain">play Again</button>
 </div> -->
